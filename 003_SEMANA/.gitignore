@@ -1,0 +1,7 @@
+# Carpetas de compilación
+[Bb]in/
+[Oo]bj/
+# Archivos de la solución de VS (opcional pero recomendado)
+*.suo
+# Dependencias de paquetes
+packages/
