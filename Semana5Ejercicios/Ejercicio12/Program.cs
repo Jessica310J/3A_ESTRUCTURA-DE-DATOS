@@ -4,8 +4,7 @@
  * A = [[1, 2, 3], [4, 5, 6]]
  * B = [[-1, 0], [0, 1], [1, 1]]
  * en una lista y muestre por pantalla su producto.
- * Nota: Para representar matrices mediante listas usar listas anidadas, 
- * representando cada vector fila en una lista.
+ * Nota: Para representar matrices mediante listas usar listas anidadas.
  */
 
 using System;
@@ -19,29 +18,29 @@ namespace Ejercicio12
         {
             Console.WriteLine("=== EJERCICIO 12: Producto de Matrices ===\n");
 
-            // Matriz A (2x3)
-            var a = new List<List<int>>
+            // Matriz A (2x3) declarada explícitamente como Lista de Listas
+            List<List<int>> a = new List<List<int>>
             {
                 new List<int> { 1, 2, 3 },
                 new List<int> { 4, 5, 6 }
             };
 
-            // Matriz B (3x2)
-            var b = new List<List<int>>
+            // Matriz B (3x2) declarada explícitamente
+            List<List<int>> b = new List<List<int>>
             {
                 new List<int> { -1, 0 },
                 new List<int> {  0, 1 },
                 new List<int> {  1, 1 }
             };
 
-            // Matriz resultado (2x2)
-            var resultado = new List<List<int>>
+            // Matriz resultado (2x2) inicializada con ceros
+            List<List<int>> resultado = new List<List<int>>
             {
                 new List<int> { 0, 0 },
                 new List<int> { 0, 0 }
             };
 
-            // Calcular producto
+            // Calcular producto usando tipos de datos enteros (int)
             for (int i = 0; i < 2; i++)
             {
                 for (int j = 0; j < 2; j++)
@@ -53,17 +52,20 @@ namespace Ejercicio12
                 }
             }
 
-            // Mostrar resultado
+            // Mostrar resultado usando tipos explícitos en los foreach
             Console.WriteLine("Resultado A × B:");
-            foreach (var fila in resultado)
+            foreach (List<int> fila in resultado)
             {
                 Console.Write("[ ");
-                foreach (var valor in fila)
+                foreach (int valor in fila)
                 {
                     Console.Write($"{valor} ");
                 }
                 Console.WriteLine("]");
             }
+            
+            Console.WriteLine("\nPresiona cualquier tecla para salir...");
+            Console.ReadKey();
         }
     }
 }

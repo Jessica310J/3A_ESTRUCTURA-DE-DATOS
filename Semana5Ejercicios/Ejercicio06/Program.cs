@@ -18,7 +18,7 @@ namespace Ejercicio06
         {
             Console.WriteLine("=== CONTROL DE ASIGNATURAS ===\n");
 
-            // 1. Almacenar las asignaturas solicitadas
+            // 1. Almacenar las asignaturas en una lista explícita
             List<string> asignaturas = new List<string> 
             { 
                 "Fisica", 
@@ -27,31 +27,31 @@ namespace Ejercicio06
                 "Sistemas Operativos" 
             };
 
-            // Lista para guardar las notas y lista para identificar cuáles borrar
+            // Definición explícita de listas auxiliares
             List<double> notas = new List<double>();
             List<string> aprobadas = new List<string>();
 
-            // 2. Preguntar la nota de cada asignatura
-            foreach (var asignatura in asignaturas)
+            // 2. Preguntar la nota de cada asignatura usando string en el foreach
+            foreach (string asignatura in asignaturas)
             {
                 Console.Write($"Introduce la nota de {asignatura}: ");
                 double nota = Convert.ToDouble(Console.ReadLine());
                 notas.Add(nota);
 
-                // Si la nota es 7 o más, la marcamos para eliminar
+                // Si la nota es 7 o más, la agregamos a la lista de aprobadas
                 if (nota >= 7.0)
                 {
                     aprobadas.Add(asignatura);
                 }
             }
 
-            // 3. ELIMINAR de la lista original las asignaturas aprobadas
-            foreach (var materiaAprobada in aprobadas)
+            // 3. ELIMINAR de la lista original usando el tipo explícito string
+            foreach (string materiaAprobada in aprobadas)
             {
                 asignaturas.Remove(materiaAprobada);
             }
 
-            // 4. Mostrar las asignaturas que quedaron (las que tiene que repetir)
+            // 4. Mostrar las asignaturas restantes
             Console.WriteLine("\n--- Asignaturas a Repetir (Nota menor a 7) ---");
 
             if (asignaturas.Count == 0)
@@ -60,13 +60,12 @@ namespace Ejercicio06
             }
             else
             {
-                foreach (var asignatura in asignaturas)
+                foreach (string asignatura in asignaturas)
                 {
                     Console.WriteLine($"• {asignatura}");
                 }
             }
             
-            // Pausa para ver el resultado
             Console.WriteLine("\nPresiona cualquier tecla para salir...");
             Console.ReadKey();
         }

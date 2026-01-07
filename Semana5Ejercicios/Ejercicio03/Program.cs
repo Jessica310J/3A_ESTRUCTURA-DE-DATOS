@@ -4,8 +4,6 @@
  * (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista, 
  * pregunte al usuario la nota que ha sacado en cada asignatura, y después 
  * las muestre por pantalla con el mensaje "En <asignatura> has sacado <nota>" 
- * donde <asignatura> es cada una de las asignaturas de la lista y <nota> 
- * cada una de las correspondientes notas introducidas por el usuario.
  */
 
 using System;
@@ -19,7 +17,8 @@ namespace Ejercicio03
         {
             Console.WriteLine("=== EJERCICIO 3: Gestión de Notas ===\n");
 
-            var asignaturas = new List<string> 
+            // Definición explícita de la lista de strings
+            List<string> asignaturas = new List<string> 
             { 
                 "Sistemas Operativos",
                 "Física",
@@ -28,13 +27,15 @@ namespace Ejercicio03
                 "Administración de Sistemas Operativos"
             };
             
-            var notas = new List<double>();
+            // Definición explícita de la lista de doubles para las notas
+            List<double> notas = new List<double>();
 
             // Pedir notas
-            foreach (var asignatura in asignaturas)
+            foreach (string asignatura in asignaturas)
             {
                 Console.Write($"Nota de {asignatura}: ");
-                var nota = Convert.ToDouble(Console.ReadLine());
+                // Conversión de la entrada de texto a tipo double
+                double nota = Convert.ToDouble(Console.ReadLine());
                 notas.Add(nota);
             }
 

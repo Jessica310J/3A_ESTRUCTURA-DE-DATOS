@@ -16,37 +16,34 @@ namespace Ejercicio10
         {
             Console.WriteLine("=== EJERCICIO 10: Análisis de Precios ===\n");
 
-            var precios = new List<double> { 50, 75, 46, 22, 80, 65, 8 };
+            // Definición explícita de la lista de precios (double)
+            List<double> precios = new List<double> { 50, 75, 46, 22, 80, 65, 8 };
 
-            Console.WriteLine("Lista de precios:");
-            foreach (var precio in precios)
-            {
-                Console.Write($"{precio} ");
-            }
+            // Inicialización explícita de variables de comparación
+            double menor = precios[0];
+            double mayor = precios[0];
 
-            // Encontrar mínimo
-            var minimo = precios[0];
-            foreach (var precio in precios)
+            // Recorrido de la lista con tipo de dato explícito
+            foreach (double precio in precios)
             {
-                if (precio < minimo)
+                if (precio < menor)
                 {
-                    minimo = precio;
+                    menor = precio;
+                }
+                
+                if (precio > mayor)
+                {
+                    mayor = precio;
                 }
             }
 
-            // Encontrar máximo
-            var maximo = precios[0];
-            foreach (var precio in precios)
-            {
-                if (precio > maximo)
-                {
-                    maximo = precio;
-                }
-            }
-
-            // Mostrar resultados
-            Console.WriteLine($"\n\nPrecio mínimo: {minimo}");
-            Console.WriteLine($"Precio máximo: {maximo}");
+            // Mostrar resultados por pantalla
+            Console.WriteLine("Precios en la lista: " + string.Join(", ", precios));
+            Console.WriteLine($"El precio menor es: {menor}");
+            Console.WriteLine($"El precio mayor es: {mayor}");
+            
+            Console.WriteLine("\nPresiona cualquier tecla para salir...");
+            Console.ReadKey();
         }
     }
 }
