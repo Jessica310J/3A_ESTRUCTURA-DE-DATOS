@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\OneDrive - Universidad Estatal Amazónica\\Escritorio\\UNIVERSIDAD  JESSICA\\3.TERCER SEMESTRE\\2.ESTRUCTURAS DE DATOS\\VISUAL STUDIO CODE\\3A_ESTRUCTURA-DE-DATOS\\semana06\\semana6_Eje_01\\semana6_Eje_01.csproj",
-      "projectName": "semana6_Eje_01",
-      "projectPath": "C:\\Users\\USER\\OneDrive - Universidad Estatal Amazónica\\Escritorio\\UNIVERSIDAD  JESSICA\\3.TERCER SEMESTRE\\2.ESTRUCTURAS DE DATOS\\VISUAL STUDIO CODE\\3A_ESTRUCTURA-DE-DATOS\\semana06\\semana6_Eje_01\\semana6_Eje_01.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\OneDrive - Universidad Estatal Amazónica\\Escritorio\\UNIVERSIDAD  JESSICA\\3.TERCER SEMESTRE\\2.ESTRUCTURAS DE DATOS\\VISUAL STUDIO CODE\\3A_ESTRUCTURA-DE-DATOS\\Semana06\\Ejercicio2_InvertirLista\\Ejercicio2_InvertirLista.csproj",
+      "projectName": "Ejercicio2_InvertirLista",
+      "projectPath": "C:\\Users\\USER\\OneDrive - Universidad Estatal Amazónica\\Escritorio\\UNIVERSIDAD  JESSICA\\3.TERCER SEMESTRE\\2.ESTRUCTURAS DE DATOS\\VISUAL STUDIO CODE\\3A_ESTRUCTURA-DE-DATOS\\Semana06\\Ejercicio2_InvertirLista\\Ejercicio2_InvertirLista.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\OneDrive - Universidad Estatal Amazónica\\Escritorio\\UNIVERSIDAD  JESSICA\\3.TERCER SEMESTRE\\2.ESTRUCTURAS DE DATOS\\VISUAL STUDIO CODE\\3A_ESTRUCTURA-DE-DATOS\\semana06\\semana6_Eje_01\\obj\\",
+      "outputPath": "C:\\Users\\USER\\OneDrive - Universidad Estatal Amazónica\\Escritorio\\UNIVERSIDAD  JESSICA\\3.TERCER SEMESTRE\\2.ESTRUCTURAS DE DATOS\\VISUAL STUDIO CODE\\3A_ESTRUCTURA-DE-DATOS\\Semana06\\Ejercicio2_InvertirLista\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
