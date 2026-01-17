@@ -2,41 +2,39 @@
 
 namespace EjercicioConteo
 {
-    // Representa la unidad básica de la secuencia
-    public class Eslabón 
+    // Clase que representa el nodo de la lista
+    public class NodoRegistro
     {
-        public int Información;
-        public Eslabón? SiguientePaso;
+        public int Valor;
+        public NodoRegistro? Siguiente;
 
-        public Eslabón(int dato)
+        public NodoRegistro(int valor)
         {
-            Información = dato;
-            SiguientePaso = null;
+            Valor = valor;
+            Siguiente = null;
         }
     }
 
     class Program
     {
-        static void Main()
+        // Función solicitada: Calcular el número de elementos recorriendo la lista
+        public static int ContarNodos(NodoRegistro? cabeza)
         {
-            Console.WriteLine(">>> CÁLCULO DE LONGITUD DE LISTA <<<");
+            int contador = 0;
+            NodoRegistro? actual = cabeza;
 
-            // Construcción manual para demostrar el manejo de punteros
-            Eslabón cabeza = new Eslabón(100);
-            cabeza.SiguientePaso = new Eslabón(200);
-            cabeza.SiguientePaso.SiguientePaso = new Eslabón(300);
-
-            // Algoritmo de recorrido
-            int totalNodos = 0;
-            Eslabón? cursor = cabeza;
-
-            while (cursor != null)
+            while (actual != null)
             {
-                totalNodos++;
-                cursor = cursor.SiguientePaso;
+                contador++;
+                actual = actual.Siguiente; // Salto al siguiente nodo
             }
+            return contador;
+        }
 
-            Console.WriteLine($"La lista contiene actualmente: {totalNodos} eslabones.");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("--- EJERCICIO 1: CONTEO DE ELEMENTOS ---");
+            // Aquí reside la lógica del algoritmo de conteo.
         }
     }
 }
